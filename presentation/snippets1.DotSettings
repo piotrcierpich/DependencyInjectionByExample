@@ -1,0 +1,58 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ABBB031AAB56C74CB8C57CE57A637946/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ABBB031AAB56C74CB8C57CE57A637946/Shortcut/@EntryValue">promptForParticipants</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ABBB031AAB56C74CB8C57CE57A637946/Text/@EntryValue">private string[] PromptForParticipants()&#xD;
+{&#xD;
+  Console.Write("Participants' names separated with comas: ");&#xD;
+  string participantsAsString = Console.ReadLine();&#xD;
+  return participantsAsString != null&#xD;
+            ? participantsAsString.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)&#xD;
+            : new string[0];&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ABBB031AAB56C74CB8C57CE57A637946/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ABBB031AAB56C74CB8C57CE57A637946/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ABBB031AAB56C74CB8C57CE57A637946/Categories/=DiPresentation/@EntryIndexedValue">DiPresentation</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ABBB031AAB56C74CB8C57CE57A637946/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ABBB031AAB56C74CB8C57CE57A637946/Scope/=139FF4CE89E7094686FDA7BF5FFBBE92/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ABBB031AAB56C74CB8C57CE57A637946/Scope/=139FF4CE89E7094686FDA7BF5FFBBE92/Type/@EntryValue">Everywhere</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=757BE49034F9D74E9F98D87A4A154B08/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=757BE49034F9D74E9F98D87A4A154B08/Shortcut/@EntryValue">endApplicationOption</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=757BE49034F9D74E9F98D87A4A154B08/Text/@EntryValue">class EndApplicationOption : IOption&#xD;
+{&#xD;
+private const string ApplicationEndsString = "e";&#xD;
+&#xD;
+public bool MatchesString(string chosenOptionAsString)&#xD;
+{&#xD;
+    return StringComparer.InvariantCulture.Equals(chosenOptionAsString, ApplicationEndsString);&#xD;
+}&#xD;
+&#xD;
+public bool Run()&#xD;
+{&#xD;
+    return false;&#xD;
+}&#xD;
+&#xD;
+public override string ToString()&#xD;
+{&#xD;
+    return ApplicationEndsString + " - application terminates";&#xD;
+}&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=757BE49034F9D74E9F98D87A4A154B08/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=757BE49034F9D74E9F98D87A4A154B08/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=757BE49034F9D74E9F98D87A4A154B08/Categories/=DiPresentation/@EntryIndexedValue">DiPresentation</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=757BE49034F9D74E9F98D87A4A154B08/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=757BE49034F9D74E9F98D87A4A154B08/Scope/=139FF4CE89E7094686FDA7BF5FFBBE92/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=757BE49034F9D74E9F98D87A4A154B08/Scope/=139FF4CE89E7094686FDA7BF5FFBBE92/Type/@EntryValue">Everywhere</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BC752BE46C8B742A9C93FDEDC043160/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BC752BE46C8B742A9C93FDEDC043160/Shortcut/@EntryValue">meetingToString</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BC752BE46C8B742A9C93FDEDC043160/Text/@EntryValue">public override string ToString()&#xD;
+{&#xD;
+    return "Meeting '" + Title + "' with " + Participants.Aggregate((p1, p2) =&gt; p1 + p2) + Environment.NewLine&#xD;
+            + "start date: " + Schedule.StartTime + Environment.NewLine&#xD;
+            + "end date: " + Schedule.EndTime + Environment.NewLine;&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BC752BE46C8B742A9C93FDEDC043160/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BC752BE46C8B742A9C93FDEDC043160/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BC752BE46C8B742A9C93FDEDC043160/Categories/=DiPresentation/@EntryIndexedValue">DiPresentation</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BC752BE46C8B742A9C93FDEDC043160/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BC752BE46C8B742A9C93FDEDC043160/Scope/=139FF4CE89E7094686FDA7BF5FFBBE92/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BC752BE46C8B742A9C93FDEDC043160/Scope/=139FF4CE89E7094686FDA7BF5FFBBE92/Type/@EntryValue">Everywhere</s:String></wpf:ResourceDictionary>

@@ -12,6 +12,7 @@
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ABBB031AAB56C74CB8C57CE57A637946/Reformat/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ABBB031AAB56C74CB8C57CE57A637946/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ABBB031AAB56C74CB8C57CE57A637946/Categories/=DiPresentation/@EntryIndexedValue">DiPresentation</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ABBB031AAB56C74CB8C57CE57A637946/Categories/=Imported_00209_002F25_002F2013/@EntryIndexedValue">Imported 9/25/2013</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ABBB031AAB56C74CB8C57CE57A637946/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ABBB031AAB56C74CB8C57CE57A637946/Scope/=139FF4CE89E7094686FDA7BF5FFBBE92/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ABBB031AAB56C74CB8C57CE57A637946/Scope/=139FF4CE89E7094686FDA7BF5FFBBE92/Type/@EntryValue">Everywhere</s:String>
@@ -39,9 +40,37 @@ public override string ToString()&#xD;
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=757BE49034F9D74E9F98D87A4A154B08/Reformat/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=757BE49034F9D74E9F98D87A4A154B08/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=757BE49034F9D74E9F98D87A4A154B08/Categories/=DiPresentation/@EntryIndexedValue">DiPresentation</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=757BE49034F9D74E9F98D87A4A154B08/Categories/=Imported_00209_002F25_002F2013/@EntryIndexedValue">Imported 9/25/2013</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=757BE49034F9D74E9F98D87A4A154B08/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=757BE49034F9D74E9F98D87A4A154B08/Scope/=139FF4CE89E7094686FDA7BF5FFBBE92/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=757BE49034F9D74E9F98D87A4A154B08/Scope/=139FF4CE89E7094686FDA7BF5FFBBE92/Type/@EntryValue">Everywhere</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=675773C273AF87448BCEEFB9CE3826C3/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=675773C273AF87448BCEEFB9CE3826C3/Shortcut/@EntryValue">logger</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=675773C273AF87448BCEEFB9CE3826C3/Text/@EntryValue">class Logger : IDisposable&#xD;
+{&#xD;
+    private readonly StreamWriter streamWriter;&#xD;
+&#xD;
+    public Logger()&#xD;
+    {&#xD;
+        streamWriter = new StreamWriter("log.txt", true);&#xD;
+    }&#xD;
+&#xD;
+    public void Log(string message)&#xD;
+    {&#xD;
+        streamWriter.WriteLine(DateTime.Now + " " + message);&#xD;
+    }&#xD;
+&#xD;
+    public void Dispose()&#xD;
+    {&#xD;
+        streamWriter.Dispose();&#xD;
+    }&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=675773C273AF87448BCEEFB9CE3826C3/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=675773C273AF87448BCEEFB9CE3826C3/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=675773C273AF87448BCEEFB9CE3826C3/Categories/=DiPresentation/@EntryIndexedValue">DiPresentation</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=675773C273AF87448BCEEFB9CE3826C3/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=675773C273AF87448BCEEFB9CE3826C3/Scope/=139FF4CE89E7094686FDA7BF5FFBBE92/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=675773C273AF87448BCEEFB9CE3826C3/Scope/=139FF4CE89E7094686FDA7BF5FFBBE92/Type/@EntryValue">Everywhere</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BC752BE46C8B742A9C93FDEDC043160/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BC752BE46C8B742A9C93FDEDC043160/Shortcut/@EntryValue">meetingToString</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BC752BE46C8B742A9C93FDEDC043160/Text/@EntryValue">public override string ToString()&#xD;
@@ -53,6 +82,7 @@ public override string ToString()&#xD;
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BC752BE46C8B742A9C93FDEDC043160/Reformat/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BC752BE46C8B742A9C93FDEDC043160/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BC752BE46C8B742A9C93FDEDC043160/Categories/=DiPresentation/@EntryIndexedValue">DiPresentation</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BC752BE46C8B742A9C93FDEDC043160/Categories/=Imported_00209_002F25_002F2013/@EntryIndexedValue">Imported 9/25/2013</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BC752BE46C8B742A9C93FDEDC043160/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BC752BE46C8B742A9C93FDEDC043160/Scope/=139FF4CE89E7094686FDA7BF5FFBBE92/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BC752BE46C8B742A9C93FDEDC043160/Scope/=139FF4CE89E7094686FDA7BF5FFBBE92/Type/@EntryValue">Everywhere</s:String></wpf:ResourceDictionary>
